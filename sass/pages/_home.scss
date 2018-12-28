@@ -37,14 +37,15 @@
 
     transform: translateY(-20rem);
 
-    @media only screen and (max-width:400px) {
+    @media only screen and (max-width:$bp-small) {
+        margin-top: 15rem;
+    }
+
+    @media only screen and (max-width:320px) {
         transform: translateY(-10rem);
         margin-top: 25rem;
     }
 
-    @media only screen and (max-width:$bp-small) {
-        margin-top: 0;
-    }
 
     grid-gap: 10rem;
 

@@ -409,13 +409,13 @@ body {
   @media only screen and (max-width: 64em) {
     .features {
       grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)); } }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 37.5em) {
+    .features {
+      margin-top: 15rem; } }
+  @media only screen and (max-width: 320px) {
     .features {
       transform: translateY(-10rem);
       margin-top: 25rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .features {
-      margin-top: 0; } }
   .features__intro {
     align-self: flex-end; }
     .features__intro p {
