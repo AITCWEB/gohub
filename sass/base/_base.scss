@@ -1,0 +1,104 @@
+// color variables
+$color-primary:#32325d;
+$color-secondary: #845cff;
+$color-secondary-light-1: #525f7f;
+$color-secondary-light-2: #212240;
+// FONT VARIABLES
+$font-primary: 'Nunito',
+sans-serif;
+$font-display: 'Josefin Sans',
+sans-serif;
+//responsive breakpoints
+$bp-largest-l: 90em; //1440px
+$bp-largest: 75em; //1200px
+$bp-large: 64em; //1024px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px default for 1 rem
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 56.25% // 56.25% for 9px
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 50% // 50% for 8px
+    }
+
+    // 50% for 8px
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-secondary-light-1;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 100vh repeat(9, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+    }
+
+    position: relative;
+}
+
+.bg {
+    &-1 {
+        background: url("../img/bg-3.png");
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: repeat;
+        background-position: center;
+        grid-column: full-start / col-start 4;
+
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+        }
+    }
+
+    &-2 {
+        background: url("../img/shape.png");
+        background-size: cover;
+        background-position: center;
+        grid-column: col-start 4 / full-end;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: full-start / full-end;
+        }
+
+        &>div {
+            width: 100%;
+            height: 100%;
+            background: url("../img/bg-1.png");
+
+            @media only screen and (max-width: $bp-small) {
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgb(255, 255, 255)),
+                    url("../img/bg-1.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

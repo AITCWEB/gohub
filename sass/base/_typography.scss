@@ -1,0 +1,42 @@
+.main__heading {
+    font-size: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+    }
+
+    font-weight: bold;
+    line-height: 1.3;
+    color: $color-primary;
+}
+
+.second--heading {
+    font-size: 5rem;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 3.5rem;
+        margin-top: 2rem;
+    }
+
+    font-weight: 300;
+    line-height: 1.3;
+    color: $color-primary;
+}
+
+.third--heading {
+    font-size: 3rem;
+    color: $color-secondary-light-2;
+}
+
+.main--paragraph {
+    font-size: 2.3rem;
+    color: $color-secondary-light-1;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+.second--paragraph {
+    font-size: 1.8rem;
+}

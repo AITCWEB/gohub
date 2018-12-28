@@ -1,0 +1,322 @@
+.header,
+.features,
+.call-to-action {
+    grid-column: center-start / center-end;
+}
+
+.header {
+    display: grid;
+    grid-gap: 20rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .main {
+        width: 50%;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        }
+    }
+}
+
+.features {
+    display: grid;
+    margin: 10rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
+
+    @media only screen and (max-width: $bp-largest-l) {
+        grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+    }
+
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    }
+
+    transform: translateY(-20rem);
+
+    @media only screen and (max-width:400px) {
+        transform: translateY(-10rem);
+        margin-top: 25rem;
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        margin-top: 0;
+    }
+
+    grid-gap: 10rem;
+
+    &__intro {
+        align-self: flex-end;
+
+        p {
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.summary {
+    grid-column: col-start 2 / col-end 7;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: center-start / center-end;
+    }
+
+    transform: translateY(-10rem);
+    text-align: center;
+}
+
+.our-job {
+    grid-column: full-start / full-end;
+    background: url("../img/bg-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: [full-start] minmax(14rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(14rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+    }
+
+    margin-bottom: 20rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 8rem;
+    }
+
+    &>div {
+        display: grid;
+        grid-column: center-start / center-end;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        align-items: start;
+        grid-row-gap: 10rem;
+        grid-column-gap: 2rem;
+        text-align: center;
+        justify-items: center;
+        margin: 10rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 10rem 6rem;
+        }
+
+        .what-we-do {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 1.5rem;
+            justify-items: center;
+
+            h4 {
+                font-size: 2rem;
+                color: $color-secondary-light-2;
+            }
+
+            p {
+                font-size: 1.6rem;
+
+            }
+        }
+    }
+
+}
+
+.call-to-action {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin-bottom: 20rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-bottom: 8rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-1 {
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                h5 {
+                    font-size: 3rem;
+                    color: $color-secondary-light-2;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                }
+
+                margin-right: 5rem;
+            }
+        }
+    }
+
+    &-2 {
+        background: url("../img/1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 25rem;
+            width: 100%;
+            order: -1;
+        }
+    }
+
+    &-2.second-img {
+        background: url("../img/2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @media only screen and (max-width: $bp-small) {
+            height: 25rem;
+            width: 100%;
+            order: 0;
+        }
+    }
+}
+
+.make-life-easier {
+    grid-column: center-start / col-start 5;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: center-start /center-end;
+    }
+}
+
+.make-life-easier-img {
+    grid-column: col-start 5 / full-end;
+    background: url("../img/3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: center-start /center-end;
+        height: 25rem;
+        grid-row: 7 / 8;
+        width: 100%;
+    }
+
+}
+
+.make-life-easier-list,
+.make-life-easier {
+    .list {
+        h3.third--heading {
+            color: $color-primary;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            color: $color-primary;
+
+            img {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+.make-life-easier-list {
+    grid-column: center-start / center-end;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    margin-top: 10rem;
+    margin-bottom: 16rem;
+
+    @media only screen and (max-width: $bp-small) {
+        margin: 6rem 0;
+    }
+}
+
+.subscribe {
+    grid-column: full-start / full-end;
+    background-color: #fafaff;
+    display: grid;
+    grid-template-columns: [full-start] minmax(14rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(14rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+    }
+
+    &>div {
+        grid-column: center-start / center-end;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        align-items: center;
+        margin: 12rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 6rem;
+            margin-bottom: 6rem;
+            margin-top: 6rem;
+        }
+
+        @media only screen and (max-width: 320px) {
+            margin-right: 2rem;
+        }
+
+        .subsc {
+            border-radius: 5px;
+            box-shadow: -6.7px 7.4px 20px 0 rgba(212, 212, 250, 0.2);
+            background-color: #ffffff;
+
+            @media only screen and (max-width: $bp-small) {
+                margin-top: 3rem;
+            }
+
+            input {
+                border: 0;
+                padding: 2rem 0 2rem 4rem;
+                outline: none;
+                color: #8081ab;
+                font-size: 2.3rem;
+
+                @media only screen and (max-width: $bp-large) {
+                    width: 25rem;
+                }
+
+                @media only screen and (max-width: $bp-small) {
+                    width: 23rem;
+                }
+
+                @media only screen and (max-width: 400px) {
+                    padding: 2rem 0 2rem 3rem;
+                }
+            }
+
+            input::placeholder {
+                font-size: 2.3rem;
+                color: #8081ab;
+                line-height: 2;
+            }
+
+            button {
+                cursor: pointer;
+                border: 0;
+                background: transparent;
+                color: $color-secondary;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: bold;
+                outline: none;
+
+                img {
+                    width: 2rem;
+                }
+            }
+        }
+    }
+}

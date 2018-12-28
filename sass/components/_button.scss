@@ -1,0 +1,51 @@
+.cta-btn {
+
+    background-color: $color-secondary;
+    color: #fff;
+    padding: 1.5rem 2.5rem;
+    letter-spacing: 1.2px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0px;
+    border: 1px solid $color-secondary;
+    border-radius: 3px;
+    cursor: pointer;
+    transform: translateY(0);
+    box-shadow: -6.7px 7.4px 20px 0 rgba(132, 92, 255, 0.2);
+    transition: all 0.2s;
+    backface-visibility: hidden;
+
+    &:hover,
+    &:active {
+        transform: translateY(-3px);
+        box-shadow: 1rem 2rem 3rem rgba(132, 92, 255, 0.2);
+    }
+}
+
+.main {
+    &__cta {
+        a {
+            color: $color-primary;
+            font-weight: bold;
+            font-size: 2rem;
+            text-decoration: none;
+            margin-left: 3.5rem;
+
+            @media only screen and (max-width: $bp-large) {
+                display: inline-block;
+                margin-top: 2rem;
+                margin-left: 0;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                display: inline-block;
+                margin-top: 2rem;
+                margin-left: 0;
+            }
+
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
