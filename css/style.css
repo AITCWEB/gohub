@@ -339,9 +339,10 @@ body {
       backface-visibility: hidden; }
       .navigation__custom-nav__nav .navigation__items--item {
         color: #fff;
-        width: 22%; }
+        width: 26%; }
       .navigation__custom-nav__nav .navigation__items--item.cta-btn {
-        padding: 0 2rem; }
+        padding: 0 2rem;
+        text-align: center; }
     .navigation__custom-nav__checkbox:checked ~ .navigation__custom-nav__background {
       transform: scale(16); }
     .navigation__custom-nav__checkbox:checked ~ .navigation__custom-nav__nav {
