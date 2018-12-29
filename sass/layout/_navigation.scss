@@ -4,8 +4,11 @@
 
     &__logo,
     &__items {
-        margin-top: 5rem;
         align-self: flex-end;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 3rem;
+        }
     }
 
 

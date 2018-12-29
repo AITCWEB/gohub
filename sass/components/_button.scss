@@ -32,11 +32,20 @@
             text-decoration: none;
             margin-left: 3.5rem;
 
-            @media only screen and (max-width: $bp-large) {
+
+            // @media only screen and (max-width: $bp-large) and(max-height: $bp-large) {
+            //     display: inline-block;
+
+            //     margin-top: 2rem;
+            //     margin-left: unset;
+            // }
+
+            @media only screen and (max-width: $bp-medium) and(max-height: $bp-medium) {
                 display: inline-block;
                 margin-top: 2rem;
                 margin-left: 0;
             }
+
 
             @media only screen and (max-width: $bp-small) {
                 display: inline-block;
